@@ -1,0 +1,18 @@
+﻿@using StockDatabase1.Models;
+@model Stock
+
+<h2>Update @Model.CompanyName</h2>
+
+
+@using (Html.BeginForm("UpdateStockToDatabase", "Stock", "Post"))
+{
+    <input asp-for="StockID" type="hidden" value="@Model.StockID" />
+
+    <label asp-for="CompanyName" class="control-label">Name</label>
+    <input type="text" name="Name" class="form-control" value="@Model.CompanyName" />
+
+    <label asp-for="CurrentPrice" class="control-label">Price</label>
+    <input type="number" step="0.01" name="Price" class="form-control" value="@Model.CurrentPrice" />
+
+    <input type="submit" value="Update Stock" class="btn btn-success" />
+}

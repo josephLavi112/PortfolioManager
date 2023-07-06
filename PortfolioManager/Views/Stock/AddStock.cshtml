@@ -1,0 +1,34 @@
+﻿@using StockDatabase1.Models;
+@model Stock
+
+<h2>Create a New Stock</h2>
+
+
+@using (Html.BeginForm("InsertStockToDatabase", "Stock", "Post"))
+{
+    <input asp-for="StockID" type="hidden" value="" />
+
+    <label asp-for="Symbol" class="control-label">Symbol</label>
+    <input type="text" name="Symbol" class="form-control" value="@Model.Symbol" />
+
+    <label asp-for="CompanyName" class="control-label">Company Name</label>
+    <input type="text" name="CompanyName" class="form-control" value="@Model.CompanyName" />
+
+    <label asp-for="CurrentPrice" class="control-label">Current Price</label>
+    <input type="number" step="0.01" name="CurrentPrice" class="form-control" value="@Model.CurrentPrice"/>
+    
+    <label asp-for="MarketCap" class="control-label">Market Cap</label>
+    <input type="number" step="0.01" name="MarketCap" class="form-control" value="@Model.MarketCap" />
+
+    <label asp-for="Sector" class="control-label">Sector</label>
+    <input type="text" name="Sector" class="form-control" value="@Model.Sector" />
+
+    <label asp-for="Industry" class="control-label">Industry</label>
+    <input type="text" name="Industry" class="form-control" value="@Model.Industry" />
+
+    <label asp-for="Country" class="control-label">Country</label>
+    <input type="text" name="Country" class="form-control" value="@Model.Country" />
+
+    <input type="submit" value="Create Stock" class="btn btn-success" />
+
+}

@@ -1,0 +1,42 @@
+﻿@using StockDatabase1.Models;
+@model Stock
+
+
+<h3>@Model.Symbol Information</h3>
+
+<table class="table">
+    <tr>
+        <th>StockID</th>
+        <th>Symbol</th>
+        <th>CompanyName</th>
+        <th>CurrentPrice</th>
+        <th>MarketCap</th>
+        <th>Sector</th>
+        <th>Industry</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td>@Model.StockID</td>
+        <td>@Model.Symbol</td>
+        <td>@Model.CompanyName</td>
+        <td>@Model.CurrentPrice</td>
+        <td>@Model.MarketCap</td>
+        <td>@Model.Sector</td>
+        <td>@Model.Industry</td>
+        <td>@Model.Country</td>
+    </tr>
+</table>
+<div style="display: block">
+    <a class="btn btn-success" onclick="return confirm('Update this Stock?')" href="/Stock/UpdateStock/@Model.StockID">Update this Stock</a>
+</div>
+
+
+<div style="display: block">
+
+    @using (Html.BeginForm("DeleteStock", "Stock", "Post"))
+    {
+        <input type="hidden" asp-for="StockID" value="@Model.StockID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this Stock" class="btn-danger btn-sm" />
+    }
+</div>
+

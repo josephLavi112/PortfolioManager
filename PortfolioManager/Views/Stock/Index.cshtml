@@ -1,0 +1,37 @@
+﻿@using StockDatabase1.Models;
+
+@model IEnumerable<Stock>
+<div class="stocktbl">
+    <h2>Stocks</h2>
+    </div>
+
+<div style="display: block">
+    <a href="/Stock/AddStock/">Create a New Stock</a>
+</div>
+<table class="table">
+    <tr>
+        <th>StockID</th>
+        <th>Symbol</th>
+        <th>CompanyName</th>
+        <th>CurrentPrice</th>
+        <th>MarketCap</th>
+        <th>Sector</th>
+        <th>Industry</th>
+        <th>Country</th>
+    </tr>
+
+    @foreach (var stock in @Model)
+    {
+        <tr>
+            <td><a href=/Stock/ViewStock/@stock.StockID>@stock.StockID</a></td>
+            <td>@stock.Symbol</td>
+            <td>@stock.CompanyName</td>
+            <td>@stock.CurrentPrice</td>
+            <td>@stock.MarketCap</td>
+            <td>@stock.Sector</td>
+            <td>@stock.Industry</td>
+            <td>@stock.Country</td>
+        </tr>
+    }
+
+</table>

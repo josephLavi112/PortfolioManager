@@ -2,11 +2,13 @@ html {
   font-size: 14px;
 }
 
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;        
+    }
 }
+
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
@@ -18,5 +20,44 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+   
 }
+table {
+    background-color: lightgray;
+    border-radius: 25px;
+}
+a{
+    text-decoration: none;
+    color: ,midnightblue;
+}
+nav {
+    background-color: lightsteelblue;
+    text-shadow: 2px 2px 5px blue;
+        
+}
+
+#header-home {
+   background-color: lightsteelblue;
+   border-radius: 25px; 
+   opacity: 95%;
+}
+.header {
+    background: lightsteelblue;
+    text-shadow: 2px 2px 5px blue;
+  
+}
+body {
+    background-color: lightsteelblue;
+}
+.stocktbl {
+    color: black;
+    text-shadow: 2px 2px 5px blue;
+    
+}
+a:hover{
+    color: white;
+}
+
+
+
